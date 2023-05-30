@@ -12,4 +12,21 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
+
+
+// Body
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: rgb(255, 255, 255);
+}
+
+// Your CSS partials
+@import "components/index";
+@import "home/index";

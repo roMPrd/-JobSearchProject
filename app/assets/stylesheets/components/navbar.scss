@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+// Navbar container
+.navbar-container {
+
+}
+
+//Navbar Title top
+.navbar-title-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  font-family: cookie;
+  font-size: 2.5rem;
+  // width: 100%;
+}
+
+//Navbar Title bottom
+.navbar-title-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  // width: 100%;
+}
+
+// Navbar all children
+.navbar-container > * {
+  // color: #252525;
+  font-weight: bold;
+  margin: 0 1rem 0 1rem;
+}
+
+// Navbar Title
+.navbar-title {
+  width: 10%;
+}
+// Navbar image
+.nav-photo {
+  width: 10%;
+  display: flex;
+  justify-content: end;
+}
+.nav-photo img {
+  max-height: 2rem;
+  border-radius: 50%;
+}
+
+// Navbar links
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 5rem;
+}
+.nav-links a {
+  text-decoration: none;
+  // color: #252525;
+}
+.nav-item {
+  position: relative;
+}
+
+// navbar active nav
+.active-nav {
+  height: 3px;
+  background: #385ae0;
+  border-radius: 1rem;
+  // margin: 0.2rem 0.5rem;
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  left: 0;
+}
