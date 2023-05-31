@@ -1,0 +1,16 @@
+<div class="index-offer-container">
+  <div class="offer-cards">
+    <% @offers.each do |offer| %>
+    <div class="offer-card">
+      <%= offer.job_title %>
+      <%= offer.company_name %>
+      <%= offer.job_location %>
+      <%= offer.company_info %>
+      <%= offer.send_date %>
+      <%= offer.application_letter %>
+      <%= offer.cv %>
+      <%= offer.archived %>
+    </div>
+    <% end %>
+  </div>
+</div>

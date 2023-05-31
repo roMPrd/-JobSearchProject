@@ -1,7 +1,9 @@
 <div class="navbar-container">
-  <div class="navbar-title-top"><p>Jobsearchproject</p></div>
+  <div class="navbar-title-top">
+    <p><%=link_to "Jobsearchproject", root_path %></p>
+  </div>
 
-  <div class="navbar-title-bottom">
+  <div class="navbar-title-bottom" data-controller="gsap">
     <%# <div class="nav-title">
       <p>Jobsearchproject</p>
     </div> %>
@@ -10,17 +12,30 @@
       <ul class="nav-links">
 
         <div class="nav-item">
-          <li><%= link_to "Home", "#" %></li>
+          <li data-action="click->gsap#navbarAnimation"><%= link_to "Home", offers_path %></li>
           <div class="active-nav"></div>
         </div>
 
         <div class="nav-item">
-          <li><%= link_to "Stats", "#" %></li>
+          <li data-action="click->gsap#navbarAnimation"><%= link_to "Stats", "#" %></li>
         </div>
 
         <div class="nav-item">
-          <li><%= link_to "Profile", "#" %></li>
+          <li data-action="click->gsap#navbarAnimation"><%= link_to "Profile", "#" %></li>
         </div>
+
+        <% if user_signed_in? %>
+          <div class="nav-item">
+            <li data-action="click->gsap#navbarAnimation"><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %></li>
+          </div>
+        <% else %>
+          <div class="nav-item">
+            <li data-action="click->gsap#navbarAnimation"><%= link_to "Log in", new_user_session_path %></li>
+          </div>
+          <div class="nav-item">
+            <li data-action="click->gsap#navbarAnimation"><%= link_to "Sign up", new_user_registration_path %></li>
+          </div>
+        <% end %>
 
       </ul>
     </div>

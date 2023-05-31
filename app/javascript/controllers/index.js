@@ -4,7 +4,8 @@
 
 import { application } from "./application"
 
+import GsapController from "./gsap_controller"
+application.register("gsap", GsapController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
-
-import gsap from "./gsap"
