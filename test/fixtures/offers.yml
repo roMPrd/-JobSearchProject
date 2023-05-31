@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job-title: MyString
+  send-date: 2023-05-31
+  application-letter: MyString
+  company-name: MyString
+  company-info: MyString
+  job-location: MyString
+  cv: MyString
+  archived: false
+  user: one
+
+two:
+  job-title: MyString
+  send-date: 2023-05-31
+  application-letter: MyString
+  company-name: MyString
+  company-info: MyString
+  job-location: MyString
+  cv: MyString
+  archived: false
+  user: two
