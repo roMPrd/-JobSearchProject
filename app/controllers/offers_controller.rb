@@ -5,6 +5,7 @@ class OffersController < ApplicationController
   def index
     # raise
     @offers = current_user.offers
+    # @date_since = Date.today - current_user.send_date
   end
 
   def show

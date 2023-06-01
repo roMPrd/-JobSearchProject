@@ -1,16 +1,28 @@
 <div class="index-offer-container">
-  <div class="offer-cards">
+  <%= link_to "+ Add", new_offer_path %>
+  <div class="offer-card">
     <% @offers.each do |offer| %>
-    <div class="offer-card">
-      <%= offer.job_title %>
-      <%= offer.company_name %>
-      <%= offer.job_location %>
-      <%= offer.company_info %>
-      <%= offer.send_date %>
-      <%= offer.application_letter %>
-      <%= offer.cv %>
-      <%= offer.archived %>
-    </div>
+      <div class="offer-card-item">
+        <div class="offer-card-job-title">
+          <%= offer.job_title %>
+        </div>
+        <div class="offer-card-company-name">
+          <%= offer.company_name %>
+        </div>
+        <div class="offer-card-job-location">
+          <%= offer.job_location %>
+        </div>
+        <div class="offer-card-send-date">
+          <%= offer.send_date %>
+        </div>
+        <div class="offer-card-days-ago">
+          <%= "#{(Date.today - offer.send_date).to_i} days ago" %>
+        </div>
+        <%#= offer.company_info %>
+        <%#= offer.application_letter %>
+        <%#= offer.cv %>
+        <%#= offer.archived %>
+      </div>
     <% end %>
   </div>
 </div>
