@@ -18,7 +18,7 @@ class OffersController < ApplicationController
   def create
     @offer = current_user.offers.build(offer_params)
     if @offer.save
-      redirect_to offer_path, notice: 'Offer was successfully created.'
+      redirect_to offers_path, notice: 'Offer was successfully created.'
     else
       render "new", status: :unprocessable_entity
     end
