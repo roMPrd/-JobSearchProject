@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
 // Navbar container
-// .navbar-container {
-
-// }
+.navbar-container {
+  position: sticky;
+  top: 0;
+}
 
 //Navbar Title top
 .navbar-title-top {

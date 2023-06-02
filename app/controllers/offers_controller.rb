@@ -1,6 +1,7 @@
 class OffersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_offer, only: %i[ show edit update destroy ]
+  respond_to :json, :html
 
   def index
     # raise
@@ -17,10 +18,15 @@ class OffersController < ApplicationController
 
   def create
     @offer = current_user.offers.build(offer_params)
-    if @offer.save
-      redirect_to offers_path, notice: 'Offer was successfully created.'
-    else
-      render "new", status: :unprocessable_entity
+
+    respond_to do |format|
+      if @offer.save
+        format .html { redirect_to offers_path, notice: 'Offer was successfully created.' }
+        format .json
+      else
+        format .html { render "new", status: :unprocessable_entity }
+        format .json
+      end
     end
   end
 

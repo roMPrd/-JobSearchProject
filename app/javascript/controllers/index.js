@@ -9,3 +9,6 @@ application.register("gsap", GsapController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import OfferZoomController from "./offer_zoom_controller"
+application.register("offer-zoom", OfferZoomController)

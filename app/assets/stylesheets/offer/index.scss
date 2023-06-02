@@ -1,9 +1,33 @@
 
 .index-offer-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
   gap: 1rem;
-  margin-top: 1rem;
+  // margin-top: 1rem;
+  width: 80%;
+  margin: auto;
+}
+
+.index-offer-container-left {
+  width: 600px;
+  
+  .hidden {
+    display: none;
+  }
+}
+
+.index-offer-container-right {
+  position: sticky;
+  width: 600px;
+  height: calc(100vh - 7rem);
+  border: 1px solid #252525;
+  top: 6rem;
+}
+
+.offer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
