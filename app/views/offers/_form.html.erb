@@ -1,0 +1,10 @@
+<%= simple_form_for @offer do |f| %>
+  <%= f.input :job_title, label: false, placeholder: 'Job title' %>
+  <%= f.input :company_name, label: false, placeholder: 'Company name' %>
+  <%= f.input :job_location, label: false, placeholder: 'Job location' %>
+  <%= f.input :send_date, label: false, placeholder: 'Send date' %>
+  <%= f.input :company_info, label: false, placeholder: 'Company infos' %>
+  <%= f.input :application_letter, label: false, placeholder: 'Application letter' %>
+  <%= f.input :cv, label: false, placeholder: 'Cv' %>
+  <%= f.submit %>
+<% end %>

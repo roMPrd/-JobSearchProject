@@ -1,0 +1,38 @@
+<div class="offer-card-item"
+  data-controller="offer-zoom"
+  data-action="click->offer-zoom#zoom">
+
+  <div class="offer-card-job-title">
+    <%= @offer.id %>
+    <%= @offer.job_title %>
+  </div>
+  <div class="offer-card-company-name">
+    <%= @offer.company_name %>
+  </div>
+  <div class="offer-card-job-location">
+    <%= @offer.job_location %>
+  </div>
+  <div class="offer-card-send-date">
+    <%= @offer.send_date %>
+  </div>
+  <div class="offer-card-days-ago">
+    <%= "#{(Date.today - @offer.send_date).to_i} days ago" %>
+  </div>
+  <div class="offer-card-company-info hidden">
+    <%= @offer.company_info %>
+  </div>
+  <div class="offer-card-application-letter hidden">
+    <%= @offer.application_letter %>
+  </div>
+  <div class="offer-card-cv hidden">
+    <%= @offer.cv %>
+  </div>
+  <div class="offer-card-archived hidden">
+    <%= @offer.archived %>
+  </div>
+  <div class="link hidden">
+    <%= link_to "UPDATE", edit_offer_path(@offer) %>
+    <%= link_to "DELETE", offer_path(@offer), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'}%>
+  </div>
+
+</div>
