@@ -5,11 +5,29 @@ class OffersController < ApplicationController
 
   def index
     # raise
-    @offers = current_user.offers
+    @offers = current_user.offers.order(id: :desc)
     # @date_since = Date.today - current_user.send_date
+
+    if params[:query].present?
+      sql_query = <<~SQL
+        offers.job_title ILIKE :query
+        OR offers.company_name ILIKE :query
+        OR offers.job_location ILIKE :query
+      SQL
+      @offers = @offers.where(sql_query, query: "%#{params[:query]}%")
+    end
+
+    respond_to do |format|
+      format.html
+      format.text { render partial: 'list', :formats=>[:html], locals: { offers: @offers } }
+    end
   end
 
   def show
+    respond_to do |format|
+      format.html
+      format.text { redirect_to offers_path, :formats=>[:html] }
+    end
   end
 
   def new

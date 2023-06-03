@@ -15,3 +15,6 @@ application.register("modals", ModalsController)
 
 import OfferZoomController from "./offer_zoom_controller"
 application.register("offer-zoom", OfferZoomController)
+
+import RefreshListController from "./refresh_list_controller"
+application.register("refresh-list", RefreshListController)
