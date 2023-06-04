@@ -24,7 +24,7 @@
   width: 600px;
   height: calc(100vh - 7rem);
   border: 1px solid #252525;
-  top: 6rem;
+  top: 3rem;
 }
 
 .offer-info {
@@ -35,4 +35,16 @@
 
 .red {
   background-color: red;
+}
+
+.offer-card-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 600px;
+  height: 60px;
+  background: white;
+  position: sticky;
+  top: 3rem;
 }
