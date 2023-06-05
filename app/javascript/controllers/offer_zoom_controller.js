@@ -12,7 +12,7 @@ export default class extends Controller {
   zoom() {
     // console.log(this.element)
     // console.log("hello from zoom controller")
-    // console.log(this.selectOfferTargets)
+    console.log(this.selectOfferTargets)
 
     // get the right container
     const rightContainer = document.getElementById("offer-info-box");
@@ -24,16 +24,16 @@ export default class extends Controller {
       modalContainer.classList.add("hidden-container");
     }
 
-    //remove move class from all offers
+    //remove background gradient class from all offers and add background white class+
     document.querySelectorAll(".offer-card-item-background").forEach((offer) => {
       offer.classList.remove("background-gradient");
       offer.classList.add("background-white");
     })
-    //add move class to selected offer
+    //add background gradient class to selected offer
     this.element.classList.remove("background-white");
     this.element.classList.add("background-gradient");
     //empty offer box
-    this.offerBox.innerHTML = " ";
+    this.offerBox.innerHTML = "";
     //render selected offer in offer box
     this.selectOfferTargets.forEach((offer) => {
       this.offerBox.insertAdjacentHTML("beforeend",

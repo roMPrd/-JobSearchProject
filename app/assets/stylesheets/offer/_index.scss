@@ -34,9 +34,10 @@
   /* overflow: scroll; */
   width: 600px;
   height: calc(100vh - 120px - 2rem);
-  border: 1px solid #252525;
+  // border: 1px solid #252525;
   top: 120px;
   margin-top: 1rem;
+  border-radius: 30px;
 }
 
 .offer-info {
