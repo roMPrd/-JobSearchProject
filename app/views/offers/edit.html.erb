@@ -4,7 +4,7 @@
     <h1>Edit offer</h1>
     <%= render "form", offer: @offer %>
     <div>
-      <%= link_to "Cancel", "#", data:{
+      <%= link_to "Cancel", "", data:{
         controller: "modals",
         action: "click->modals#closeModal"
       } %>

@@ -1,29 +1,32 @@
-<div class="index-offer-container">
+<div class="index-offer-container" data-controller="refresh-list">
 
-  <div class="index-offer-container-left">
-    <div class="offer-card" data-controller="refresh-list">
-      <div class="offer-card-options">
-        <%= link_to "+ Add", new_offer_path, data: { turbo_frame: "modal" }, class: "button-main" %>
-        <%= form_with url: offers_path, method: :get, html: { class: 'button-main form-search', data: { refresh_list_target: 'form' } } do |f| %>
-          <%= f.text_field :query,
-                            class: "button-search",
-                            placeholder: 'Search',
-                            value: params[:query],
-                            data: {
-                              refresh_list_target: 'searchInput',
-                            action: "keyup->refresh-list#update"
-                          } %>
-        <% end %>
+  <div class="offer-card-options">
+    <%= link_to "+ Add", new_offer_path, data: { turbo_frame: "modal", controller: "modals", action: "click->modals#toggleContainers" }, class: "button-main" %>
+    <%= form_with url: offers_path, method: :get, html: { class: 'button-main form-search', data: { refresh_list_target: 'form' } } do |f| %>
+      <%= f.text_field :query,
+                        class: "button-search",
+                        placeholder: 'Search',
+                        value: params[:query],
+                        data: {
+                          refresh_list_target: 'searchInput',
+                        action: "keyup->refresh-list#update"
+                      } %>
+    <% end %>
+  </div>
+
+  <div class="offer-container-left-and-right">
+    <div class="index-offer-container-left">
+      <div class="offer-card">
+        <%= render 'list', offers: @offer %>
       </div>
-      <%= render 'list', offers: @offer %>
-      <%# <div class="" data-refresh-list-target="list">
-      </div> %>
     </div>
-  </div>
-  <div>
-    <%= turbo_frame_tag "modal" %>
-  </div>
+
+    <div id="modal-add-edit" class="index-offer-container-right hidden-container">
+      <%= turbo_frame_tag "modal" %>
+    </div>
+
     <div class="index-offer-container-right" id="offer-info-box" data-controller="offer-zoom" data-offer-zoom-target="offerInfo">
     </div>
+  </div>
 
 </div>

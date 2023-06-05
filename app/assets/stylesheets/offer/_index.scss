@@ -1,12 +1,23 @@
 
 .index-offer-container {
+  // display: flex;
+  // flex-direction: row;
+  // align-items: flex-start;
+  // justify-content: space-evenly;
+  // gap: 1rem;
+  // margin-top: 1rem;
+  width: 70%;
+  margin: auto;
+}
+
+.offer-container-left-and-right {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-evenly;
-  gap: 1rem;
+  justify-content: space-between;
+  // gap: 1rem;
   // margin-top: 1rem;
-  width: 80%;
+  // width: 80%;
   margin: auto;
 }
 
@@ -20,11 +31,12 @@
 
 .index-offer-container-right {
   position: sticky;
-  overflow: scroll;
+  /* overflow: scroll; */
   width: 600px;
-  height: calc(100vh - 7rem);
+  height: calc(100vh - 120px - 2rem);
   border: 1px solid #252525;
-  top: 3rem;
+  top: 120px;
+  margin-top: 1rem;
 }
 
 .offer-info {
@@ -47,8 +59,14 @@
   background: white;
   position: sticky;
   top: 3rem;
+  z-index: 5;
+  background: white;
 }
 
 #offer-list-modal {
   width: 100%;
+}
+
+.hidden-container {
+  display: none;
 }
