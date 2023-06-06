@@ -32,3 +32,39 @@
   height: calc(100% - 4px);
   width: calc(100% - 4px);
 }
+
+.button-cancel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border: 2px solid red;
+  color: red;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+  width: 100px;
+  text-decoration: none;
+}
+
+.search-bar {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+}
+
+.empty-search {
+  color: grey;
+  position: absolute;
+  right: 20px;
+  font-weight: bold;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.empty-search:hover {
+  color: red;
+}

@@ -6,7 +6,7 @@ export default class extends Controller {
   }
   toggleContainers() {
     // get the right container
-    const rightContainer = document.getElementById("offer-info-box");
+    const rightContainer = document.getElementById("holder-container-right");
     // hide right container
     rightContainer.classList.add("hidden-container");
 

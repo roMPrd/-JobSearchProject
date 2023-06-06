@@ -1,14 +1,15 @@
 <%= turbo_frame_tag "modal" do %>
 
   <div class="modal">
-    <h1>New offer</h1>
-    <%= render "form", offer: @offer %>
-    <div>
-      <%= link_to "Cancel", "", data:{
-        controller: "modals",
-        action: "click->modals#closeModal"
-      } %>
-    </div>
-  </div>
+    <%# <div class="holder-container-right"> %>
+      <div class="form-background-gradient">
+        <div class="form-container-field background-white">
 
+          <h2>New offer</h2>
+          <%= render "form", offer: @offer %>
+
+        </div>
+      </div>
+    <%# </div> %>
+  </div>
 <% end %>

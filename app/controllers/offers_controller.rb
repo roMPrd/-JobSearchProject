@@ -1,6 +1,6 @@
 class OffersController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_offer, only: %i[ show edit update destroy ]
+  before_action :set_offer, only: %i[show edit update destroy]
   # respond_to :json, :html
 
   def index
@@ -15,6 +15,7 @@ class OffersController < ApplicationController
         OR offers.job_location ILIKE :query
       SQL
       @offers = @offers.where(sql_query, query: "%#{params[:query]}%")
+
     end
 
     respond_to do |format|

@@ -79,3 +79,11 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: none;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+.button-form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+}

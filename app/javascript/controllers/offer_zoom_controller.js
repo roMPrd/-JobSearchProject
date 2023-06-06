@@ -15,7 +15,7 @@ export default class extends Controller {
     // console.log(this.selectOfferTargets)
 
     // get the right container
-    const rightContainer = document.getElementById("offer-info-box");
+    const rightContainer = document.getElementById("holder-container-right");
     //get the modal container
     const modalContainer = document.getElementById("modal-add-edit")
     // toggle hidden class for right container or empty modal

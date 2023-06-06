@@ -33,8 +33,8 @@
           <%= offer.archived %>
         </div>
         <div class="link hidden" data-offer-zoom-target="selectOffer">
-          <%= link_to "UPDATE", edit_offer_path(offer), data: { turbo_frame: "modal", controller: "modals", action: "click->modals#toggleContainers" }, class: "button-main"%>
-          <%= link_to "DELETE", offer_path(offer), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'}%>
+          <%= link_to "UPDATE", edit_offer_path(offer), class: "button-main", data: { turbo_frame: "modal", controller: "modals", action: "click->modals#toggleContainers" }%>
+          <%= link_to "DELETE", offer_path(offer), class:"button-cancel", data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'}%>
         </div>
       </div>
 

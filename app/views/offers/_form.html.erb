@@ -1,13 +1,58 @@
-<div class="" >
-  <%= simple_form_for @offer, data: { controller: "refresh-list", refresh_list_target: 'formSubmit' } do |f| %>
-    <%= f.input :job_title, label: false, placeholder: 'Job title' %>
-    <%= f.input :company_name, label: false, placeholder: 'Company name' %>
-    <%= f.input :job_location, label: false, placeholder: 'Job location' %>
-    <%= f.input :send_date, label: false, placeholder: 'Send date' %>
-    <%= f.input :company_info, label: false, placeholder: 'Company infos' %>
-    <%= f.input :application_letter, label: false, placeholder: 'Application letter' %>
-    <%= f.input :cv, label: false, placeholder: 'Cv' %>
-    <%= f.submit "save",data: { action: "keydown.enter->refresh-list#checkSubmit click->refresh-list#checkSubmit" } %>
+<%# <div class="" > %>
+  <%= simple_form_for @offer, data: { controller: "refresh-list", refresh_list_target: 'formSubmit' }, html: { class: "form-field-item" } do |f| %>
+    <div>
+      <div data-controller="forms" data-action="click->forms#toggleField" data-forms-field-value= "job-title">
+        <%= f.input :job_title, label: false, placeholder: 'Job title',input_html: { class: "form-field" } %>
+      </div>
+      <div class="field job-title"></div>
+    </div>
+
+    <div>
+      <div data-controller="forms" data-action="click->forms#toggleField" data-forms-field-value= "company-name">
+        <%= f.input :company_name, label: false, placeholder: 'Company name',input_html: { class: "form-field" } %>
+      </div>
+      <div class="field company-name"></div>
+    </div>
+
+    <div>
+      <div data-controller="forms" data-action="click->forms#toggleField" data-forms-field-value= "job-location">
+        <%= f.input :job_location, label: false, placeholder: 'Job location',input_html: { class: "form-field" } %>
+      </div>
+      <div class="field job-location"></div>
+    </div>
+
+    <div>
+      <div data-controller="forms" data-action="click->forms#toggleField" data-forms-field-value= "send-date">
+        <%= f.input :send_date, label: false, placeholder: 'Send date',input_html: { class: "form-field" } %>
+      </div>
+      <div class="field send-date"></div>
+    </div>
+
+    <div>
+      <div data-controller="forms" data-action="click->forms#toggleField" data-forms-field-value= "company-infos">
+        <%= f.input :company_info, label: false, placeholder: 'Company infos',input_html: { class: "form-field" } %>
+      </div>
+      <div class="field company-infos"></div>
+    </div>
+
+    <div>
+      <div data-controller="forms" data-action="click->forms#toggleField" data-forms-field-value= "application-letter">
+        <%= f.input :application_letter, label: false, placeholder: 'Application letter',input_html: { class: "form-field" } %>
+      </div>
+      <div class="field application-letter"></div>
+    </div>
+
+    <div>
+      <div data-controller="forms" data-action="click->forms#toggleField" data-forms-field-value= "cv">
+        <%= f.input :cv, label: false, placeholder: 'Cv',input_html: { class: "form-field" } %>
+      </div>
+      <div class="field cv"></div>
+    </div>
+
+    <div class="button-form">
+      <%= f.submit "save", class: "button-main", data: { action: "keydown.enter->refresh-list#checkSubmit click->refresh-list#checkSubmit" } %>
+      <%= link_to "Cancel", "", class: "button-cancel", data:{ controller: "modals", action: "click->modals#closeModal" } %>
+    </div>
   <% end %>
-</div>
+<%# </div> %>
 <%# form:submit_success->gtm#pushSuccess %>

@@ -35,4 +35,9 @@ export default class extends Controller {
     setTimeout(refreshList, 1000);
   }
 
+  emptySearch() {
+    console.log("hello from emptySearch")
+    this.searchInputTarget.value = "";
+  }
+
 }
