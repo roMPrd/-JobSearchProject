@@ -3,48 +3,51 @@
     <div class="form-container-field background-white">
       <h2>Sign up</h2>
 
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "form-field-item" }) do |f| %>
         <%= f.error_notification %>
 
-        <div class="" data-controller="forms">
-          <div data-action="click->forms#toggleField" data-forms-target="email" data-forms-field-value= "email">
-          <%= f.input :email,
-                      label: false,
-                      placeholder: "Email",
-                      required: false,
-                      autofocus: true,
-                      input_html: {
-                        autocomplete: "email",
-                        class: "form-field",
-                      },
-                      data: {
-                        action: "input->forms#toggleField"
-                      }%>
+        <%# <div class=""> %>
+          <div data-controller="forms" data-action="click->forms#toggleField" data-forms-field-value= "email-sign-in">
+            <%= f.input :email,
+                        label: false,
+                        placeholder: "Email",
+                        required: false,
+                        autofocus: true,
+                        input_html: {
+                          autocomplete: "email",
+                          class: "form-field",
+                        } %>
           </div>
-          <div class="field active"></div>
-          <%= f.input :password,
-                      label: false,
-                      placeholder: "Password",
-                      required: false,
-                      input_html: {
-                        autocomplete: "new-password",
-                        class: "form-field"
-                        } %>
-          <div class="field"></div>
-          <%= f.input :password_confirmation,
-                      label: false,
-                      placeholder: "Confirm password",
-                      required: false,
-                      input_html: {
-                        autocomplete: "new-password",
-                        class: "form-field"
-                        } %>
-        </div>
-        <div class="field"></div>
+          <div class="field email-sign-in"></div>
 
-        <div class="form-actions">
-          <%= f.button :submit, "Sign up", class: "button-main" %>
-        </div>
+          <div data-controller="forms" data-action="click->forms#toggleField" data-forms-field-value= "password-sign-in">
+            <%= f.input :password,
+                        label: false,
+                        placeholder: "Password",
+                        required: false,
+                        input_html: {
+                          autocomplete: "new-password",
+                          class: "form-field"
+                        } %>
+          </div>
+          <div class="field password-sign-in"></div>
+
+          <div data-controller="forms" data-action="click->forms#toggleField" data-forms-field-value= "password-confirmation-sign-in">
+            <%= f.input :password_confirmation,
+                        label: false,
+                        placeholder: "Confirm password",
+                        required: false,
+                        input_html: {
+                          autocomplete: "new-password",
+                          class: "form-field"
+                        } %>
+          </div>
+          <div class="field password-confirmation-sign-in"></div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Sign up", class: "button-main", style: "cursor: pointer" %>
+          </div>
+        <%# </div> %>
       <% end %>
 
     </div>

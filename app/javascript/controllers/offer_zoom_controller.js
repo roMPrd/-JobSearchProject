@@ -12,7 +12,7 @@ export default class extends Controller {
   zoom() {
     // console.log(this.element)
     // console.log("hello from zoom controller")
-    console.log(this.selectOfferTargets)
+    // console.log(this.selectOfferTargets)
 
     // get the right container
     const rightContainer = document.getElementById("offer-info-box");

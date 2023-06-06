@@ -26,7 +26,7 @@ export default class extends Controller {
 
   closeModal() {
     // prevent refresh
-    event.preventDefault();
+    // event.preventDefault();
 
     // get the left container
     const rightContainer = document.getElementById("offer-info-box");

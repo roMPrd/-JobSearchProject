@@ -4,12 +4,12 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = [ "form", "list", "searchInput", "formSubmit" ]
   connect() {
-    console.log("hello from refresh-list controller")
+    // console.log("hello from refresh-list controller")
   }
 
 
   update() {
-    console.log(this.formTarget.action)
+    // console.log(this.formTarget.action)
     const url = `${this.formTarget.action}?query=${this.searchInputTarget.value}`
     fetch(url, { headers: { 'Accept': "text/plain" } })
     .then(response => response.text())
@@ -19,8 +19,8 @@ export default class extends Controller {
   }
 
   checkSubmit() {
-    console.log("hello from checkSubmit")
-    console.log(this.formSubmitTarget.action)
+    // console.log("hello from checkSubmit")
+    // console.log(this.formSubmitTarget.action)
     // get url /offers
     const url = `${this.formSubmitTarget.action}`
     // refresh list

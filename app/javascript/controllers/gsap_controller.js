@@ -71,21 +71,21 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
     // console.log("Hello, Stimulus!", this.element)
-    console.log("hello from gsap controller")
+    // console.log("hello from gsap controller")
     const links = document.querySelectorAll(".nav-links a");
     const activeNav = document.querySelector(".active-nav");
   }
 
   navbarAnimation() {
-    console.log("hello from navbarAnimation controller")
+    // console.log("hello from navbarAnimation controller")
 
     const links = document.querySelectorAll(".nav-links a");
     const activeNav = document.querySelector(".active-nav");
 
     gsap.registerPlugin(Flip);
 
-    console.log(links);
-    console.log(activeNav);
+    // console.log(links);
+    // console.log(activeNav);
 
     // links.forEach((link) => {
     //   // turn navs blue
