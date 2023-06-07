@@ -27,7 +27,7 @@ export default class extends Controller {
     //remove background gradient class from all offers and add background white class+
     document.querySelectorAll(".offer-card-item-background").forEach((offer) => {
       offer.classList.remove("background-gradient");
-      offer.classList.add("background-white");
+      if (!offer.classList.contains("background-white")) {offer.classList.add("background-white");}
     })
     //add background gradient class to selected offer
     this.element.classList.remove("background-white");

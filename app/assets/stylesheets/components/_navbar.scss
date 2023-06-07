@@ -3,11 +3,11 @@
 
 // Navbar container
 .navbar-container {
-  background: white;
+  background: var(--white);
   position: sticky;
   top: -60px;
   z-index: 5;
-  background: white;
+  background: var(white);
 }
 
 //Navbar Title top

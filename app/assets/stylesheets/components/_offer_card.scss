@@ -14,10 +14,10 @@
   align-items: center;
   width: 100%;
   position: relative;
-  box-shadow: 5px 5px 8px #bebebe;
+  // box-shadow: 5px 5px 8px #bebebe;
   margin-top: 1rem;
-  border-radius: 32px;
-  height: 70px;
+  border-radius: 10px;
+  height: 300px;
 
 
   .offer-card-item {
@@ -25,26 +25,76 @@
     position: relative;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-    /* border: 1px solid #252525; */
-    border-radius: 30px;
+    align-items: flex-start;
+    flex-direction: column;
+    /* gap: 1rem; */
+    /* border-radius: 30px; */
     height: calc(100% - 4px);
     width: calc(100% - 4px);
-    border-radius: 30px;
+    border-radius: 8px;
+    padding: 1rem;
   }
 
   .offer-card-item > * {
-    text-align: center;
-    width: 20%;
-    padding: 0px 1rem 0px 1rem;
+    /* text-align: center; */
+    /* width: 20%; */
+    padding: 0.5rem 0;
+  }
+}
+
+.offer-container-left-and-right {
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    // margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    // margin-bottom: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+    // margin-bottom: 1rem;
+  }
+
+  .item-inline-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    // gap: 1rem;
+  }
+  .item-inline-flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .boxed-item {
+    // border: 1px solid #b1b1b1;
+    border-radius: 5px;
+    padding: 0.5rem;
+    // width: 100%;
+    background: var(--lightgrey);
+  }
+
+  .link {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
 
 .background-gradient {
   background: linear-gradient(150deg, #f400ff 0%, #8800ff 40%, #8800ff 60%, #00d4ff 100%);
+  border: none;
 }
 
 .background-white {
-  background: white;
+  background: var(--white);
+  border: 1px solid var(--lightgrey);
 }

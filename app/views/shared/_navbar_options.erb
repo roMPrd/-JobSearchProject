@@ -1,0 +1,23 @@
+<div class="navbar-options">
+
+  <div class="offer-card-options">
+
+    <%= link_to "+ Add", new_offer_path, data: { turbo_frame: "modal", controller: "modals", action: "click->modals#toggleContainers" }, class: "button-main" %>
+
+    <div class="search-bar">
+      <%= form_with url: offers_path, method: :get, html: { class: 'button-main form-search', data: { refresh_list_target: 'form' } } do |f| %>
+        <%= f.text_field :query,
+                          class: "button-search",
+                          placeholder: 'Search',
+                          value: params[:query],
+                          data: {
+                            refresh_list_target: 'searchInput',
+                          action: "keyup->refresh-list#update"
+                        } %>
+      <% end %>
+      <p class="empty-search" data-action="click->refresh-list#emptySearch click->refresh-list#update">x</p>
+    </div>
+
+  </div>
+
+</div>

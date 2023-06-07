@@ -50,7 +50,7 @@
     </div>
 
     <div class="button-form">
-      <%= f.submit "save", class: "button-main", data: { action: "keydown.enter->refresh-list#checkSubmit click->refresh-list#checkSubmit" } %>
+      <%= f.submit "Save", class: "button-main", data: { action: "keydown.enter->refresh-list#checkSubmit click->refresh-list#checkSubmit" } %>
       <%= link_to "Cancel", "", class: "button-cancel", data:{ controller: "modals", action: "click->modals#closeModal" } %>
     </div>
   <% end %>

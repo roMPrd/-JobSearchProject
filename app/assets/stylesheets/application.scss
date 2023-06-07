@@ -21,6 +21,14 @@
 
 // @import "offer/index";
 
+// Colors
+:root {
+  --grey: #b1b1b1;
+  --lightgrey: #dfdede;
+  --white: #ffffff;
+  --red: #ff0000;
+}
+
 // Body
 * {
   margin: 0;
@@ -30,6 +38,6 @@
 
 body {
   font-family: "Lato", sans-serif;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--white);
   min-height: calc(100vh + 60px);
 }
